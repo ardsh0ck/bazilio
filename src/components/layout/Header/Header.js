@@ -1,7 +1,5 @@
-import { Link } from 'react-router-dom'
 import TopLine from '../TopLine/TopLine'
 import styles from './Header.module.scss'
-import { ReactComponent as Logo } from '../../../assets/images/svg/logo.svg'
 import clsx from 'clsx'
 import Navigation from '../../organism/Navigation/Navigation'
 
