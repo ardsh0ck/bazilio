@@ -1,0 +1,7 @@
+.topline {
+  @apply bg-white border-solid border-b border-[#f5f5f5];
+
+  &Inner {
+    @apply flex py-5;
+  }
+}

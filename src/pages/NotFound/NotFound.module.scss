@@ -1,0 +1,27 @@
+.notFound {
+  @apply pt-14 pb-16 text-center;
+
+  &Grafic {
+    @apply flex items-center justify-center gap-3 mb-7;
+
+    &Pizza {
+      animation: pizzaRatation 10s linear infinite;
+    }
+  }
+
+  &Heading {
+    @apply mb-3;
+  }
+
+  &Caption {
+    @apply w-full max-w-xs mx-auto mb-7 text-[17px] leading-6 text-secondary-black;
+  }
+}
+@keyframes pizzaRatation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

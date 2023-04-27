@@ -1,0 +1,15 @@
+.header {
+  @apply bg-white;
+
+  &Inner {
+    @apply py-5;
+  }
+
+  &Logo {
+    @apply text-secondary-accent;
+
+    svg {
+      @apply h-[32px];
+    }
+  }
+}

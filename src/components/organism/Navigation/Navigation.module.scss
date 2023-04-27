@@ -1,0 +1,13 @@
+.navigation {
+  &List {
+    @apply flex items-center gap-8;
+  }
+
+  &Logo {
+    @apply pr-2 text-secondary-accent;
+  }
+
+  &Link:not(&Logo) {
+    @apply font-medium text-main-black no-underline;
+  }
+}

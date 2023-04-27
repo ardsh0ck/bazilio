@@ -1,0 +1,17 @@
+html,
+body {
+  @apply min-h-full;
+}
+
+body {
+  font-family: 'Mulish', sans-serif;
+  @apply bg-background font-normal;
+}
+
+.inner {
+  @apply max-w-[1400px] mx-auto;
+}
+
+.heading {
+  @apply text-[34px] font-semibold;
+}
