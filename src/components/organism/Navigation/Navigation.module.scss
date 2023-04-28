@@ -4,7 +4,18 @@
   }
 
   &Logo {
-    @apply pr-2 text-secondary-accent;
+    @apply block pr-2 text-secondary-accent;
+  }
+
+  &Link {
+    @apply relative;
+  }
+
+  &LinkActive:not(&Logo) {
+    &::after {
+      @apply h-[2px] mt-[8px] absolute left-1/2 -translate-x-1/2 block w-4 rounded-lg bg-main-accent;
+      content: '';
+    }
   }
 
   &Link:not(&Logo) {

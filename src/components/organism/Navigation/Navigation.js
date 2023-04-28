@@ -1,50 +1,71 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import { v4 as uuidv4 } from 'uuid'
+import clsx from 'clsx'
 import styles from './Navigation.module.scss'
 import { ReactComponent as Logo } from '../../../assets/images/svg/logo.svg'
-import clsx from 'clsx'
 
 const Navigation = () => {
+  const links = [
+    {
+      url: '/',
+      img: <Logo />,
+      text: 'Домашня сторінка',
+      id: uuidv4(),
+    },
+    {
+      url: 'pizza',
+      text: 'Піца',
+      id: uuidv4(),
+    },
+    {
+      url: 'salads',
+      text: 'Салати',
+      id: uuidv4(),
+    },
+    {
+      url: 'drinks',
+      text: 'Напої',
+      id: uuidv4(),
+    },
+    {
+      url: 'actions',
+      text: 'Акції',
+      id: uuidv4(),
+    },
+    {
+      url: 'contacts',
+      text: 'Контакти',
+      id: uuidv4(),
+    },
+    {
+      url: 'delivery',
+      text: 'Доставка',
+      id: uuidv4(),
+    },
+  ]
+
   return (
     <nav className={styles.navigation}>
       <ul className={styles.navigationList}>
-        <li className={styles.navigationItem}>
-          <Link
-            to={'/'}
-            className={clsx(styles.navigationLink, styles.navigationLogo)}
-          >
-            <Logo />
-          </Link>
-        </li>
-        <li className={styles.navigationItem}>
-          <Link to="pizza" className={styles.navigationLink}>
-            Піца
-          </Link>
-        </li>
-        <li className={styles.navigationItem}>
-          <Link to="salads" className={styles.navigationLink}>
-            Салати
-          </Link>
-        </li>
-        <li className={styles.navigationItem}>
-          <Link to="drinks" className={styles.navigationLink}>
-            Напої
-          </Link>
-        </li>
-        <li className={styles.navigationItem}>
-          <Link to="actions" className={styles.navigationLink}>
-            Акції
-          </Link>
-        </li>
-        <li className={styles.navigationItem}>
-          <Link to="contacts" className={styles.navigationLink}>
-            Контакти
-          </Link>
-        </li>
-        <li className={styles.navigationItem}>
-          <Link to="delivery" className={styles.navigationLink}>
-            Доставка
-          </Link>
-        </li>
+        {links.map((link) => {
+          return (
+            <li className={styles.navigationItem} key={link.id}>
+              <NavLink
+                to={link.url}
+                title={link.title}
+                className={({ isActive }) =>
+                  clsx(styles.navigationLink, {
+                    [styles.navigationLogo]: link.img,
+                    [styles.navigationLinkActive]: isActive,
+                  })
+                }
+              >
+                {link.img && link.img}
+                {!link.img && link.text}
+              </NavLink>
+            </li>
+          )
+        })}
       </ul>
     </nav>
   )

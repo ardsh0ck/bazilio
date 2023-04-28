@@ -1,0 +1,31 @@
+.catalog {
+  @apply max-w-[1400px] w-full mx-auto;
+
+  &List {
+    @apply grid gap-4 scroll-mx-6 px-6;
+
+    @screen md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @screen lg {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @screen xl {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &Scroll {
+      @apply flex flex-nowrap overflow-auto pb-7;
+    }
+  }
+
+  &Item {
+    min-width: 300px;
+
+    @screen md {
+      @apply min-w-0;
+    }
+  }
+}

@@ -9,7 +9,7 @@ const Layout = () => {
     <div className={clsx(styles.layout)}>
       <Header />
 
-      <main>
+      <main className={styles.layoutContent}>
         <Outlet />
       </main>
 

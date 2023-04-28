@@ -1,8 +1,43 @@
 .header {
   @apply bg-white;
 
+  &Topline {
+    @apply border-[#f5f5f5] hidden bg-white border-solid border-b;
+    @apply lg:block;
+
+    &Inner {
+      @apply flex items-center justify-between py-4;
+    }
+
+    &Contacts {
+      @apply text-[15px] flex items-center gap-10 text-main-black opacity-50;
+    }
+
+    &Socials {
+      @apply flex items-center gap-2;
+
+      &Facebook {
+        svg {
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      &Instagram {
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+
+    &Phone {
+      @apply text-lg;
+    }
+  }
+
   &Inner {
-    @apply py-5;
+    @apply py-4;
   }
 
   &Logo {

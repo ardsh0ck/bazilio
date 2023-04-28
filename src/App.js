@@ -9,6 +9,7 @@ import Drinks from './pages/Drinks/Drinks'
 import Contacts from './pages/Contacts/Contacts'
 import Delivery from './pages/Delivery/Delivery'
 import Actions from './pages/Actions/Actions'
+import Checkout from './pages/Checkout/Checkout'
 import NotFound from './pages/NotFound/NotFound'
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <Route element={<Actions />} path="actions" />
             <Route element={<Delivery />} path="delivery" />
             <Route element={<Contacts />} path="contacts" />
+            <Route element={<Checkout />} path="checkout" />
             <Route element={<NotFound />} path="*" />
           </Route>
         </Routes>
