@@ -9,7 +9,7 @@ body {
 }
 
 .inner {
-  @apply max-w-[1400px] mx-auto p-4 md:p-6;
+  @apply max-w-[1440px] md:max-w-[1460px] mx-auto px-4 md:px-6;
 }
 
 .heading {

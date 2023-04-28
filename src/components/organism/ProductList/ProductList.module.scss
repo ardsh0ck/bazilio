@@ -1,5 +1,5 @@
 .catalog {
-  @apply max-w-[1400px] w-full mx-auto;
+  @apply max-w-[1440px] md:max-w-[1460px] w-full mx-auto;
 
   &List {
     @apply grid gap-4 scroll-mx-6 px-6;
@@ -18,14 +18,16 @@
 
     &Scroll {
       @apply flex flex-nowrap overflow-auto pb-7;
-    }
-  }
+      -ms-overflow-style: none;
+      scrollbar-width: none;
 
-  &Item {
-    min-width: 300px;
+      &::-webkit-scrollbar {
+        display: none;
+      }
 
-    @screen md {
-      @apply min-w-0;
+      .catalogItem {
+        min-width: 300px;
+      }
     }
   }
 }
