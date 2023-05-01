@@ -38,15 +38,7 @@
   }
 
   &Label {
-    @apply rounded-[10px] h-[28px] px-[12px] absolute left-3 top-3 flex items-center text-sm font-bold text-white;
-
-    &New {
-      @apply bg-blue;
-    }
-
-    &Week {
-      @apply bg-green;
-    }
+    @apply top-3 left-3;
   }
 
   &Pepper {

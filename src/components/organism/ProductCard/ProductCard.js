@@ -1,8 +1,8 @@
 import { Link, useLocation } from 'react-router-dom'
-import clsx from 'clsx'
 import Button from '../Button/Button'
 import { Icons } from '../Icons/Icons'
 import styles from './ProductCard.module.scss'
+import PromoLabel from '../PromoLabel/PromoLabel'
 
 const ProductCard = (props) => {
   const { slug, image, title, weight, contents, price, label, hot } = props
@@ -23,16 +23,7 @@ const ProductCard = (props) => {
           <Icons name="icon-pepper" className={styles.productCardPepper} />
         )}
 
-        {label && (
-          <p
-            className={clsx(styles.productCardLabel, {
-              [styles.productCardLabelNew]: label?.type === 'new',
-              [styles.productCardLabelWeek]: label?.type === 'week',
-            })}
-          >
-            {label?.text}
-          </p>
-        )}
+        {label && <PromoLabel {...label} className={styles.productCardLabel} />}
       </Link>
 
       <div className={styles.productCardFooter}>

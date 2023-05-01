@@ -1,3 +1,69 @@
 .product {
   @apply flex pt-3;
+
+  &Picture {
+    @apply relative w-1/2 shrink-0;
+
+    img {
+      @apply max-w-[500px] w-full;
+    }
+
+    &Label {
+      @apply top-[0] left-[0];
+    }
+  }
+
+  &Info {
+    @apply max-w-[500px] w-full;
+  }
+
+  &Header {
+    @apply mb-8;
+  }
+
+  &Weight {
+    @apply mb-2 text-lg text-main-accent font-semibold;
+  }
+
+  &Contents {
+    @apply mb-8 text-lg;
+
+    &Label {
+      @apply mb-2 font-semibold;
+    }
+
+    &Text {
+      @apply leading-[1.4] text-main-black-50;
+    }
+  }
+
+  &Ingredients {
+    @apply mb-8 py-8 border-solid border-t border-b border-borders-color;
+
+    &Toggle {
+      @apply flex items-center gap-2 text-lg font-semibold;
+
+      svg {
+        @apply text-main-accent;
+      }
+
+      &Opened {
+        svg {
+          @apply text-main-black-50;
+        }
+      }
+    }
+
+    &List {
+      @apply flex flex-wrap justify-between gap-y-2 mt-6;
+    }
+
+    &Item {
+      @apply w-[45%];
+    }
+
+    &Label {
+      @apply flex items-center justify-between w-full;
+    }
+  }
 }

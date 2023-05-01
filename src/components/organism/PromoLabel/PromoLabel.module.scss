@@ -1,0 +1,11 @@
+.label {
+  @apply rounded-[10px] h-[28px] px-[12px] absolute flex items-center text-sm font-bold text-white;
+
+  &New {
+    @apply bg-blue;
+  }
+
+  &Week {
+    @apply bg-green;
+  }
+}

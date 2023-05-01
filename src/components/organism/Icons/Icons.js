@@ -5,6 +5,8 @@ import { ReactComponent as Facebook } from '../../../assets/images/svg/icon-face
 import { ReactComponent as Pepper } from '../../../assets/images/svg/icon-pepper.svg'
 import { ReactComponent as Arrow } from '../../../assets/images/svg/icon-arrow.svg'
 import { ReactComponent as Menu } from '../../../assets/images/svg/icon-menu.svg'
+import { ReactComponent as Plus } from '../../../assets/images/svg/icon-plus.svg'
+import { ReactComponent as Minus } from '../../../assets/images/svg/icon-minus.svg'
 import clsx from 'clsx'
 
 export const Icons = ({ name, className }) => {
@@ -22,6 +24,10 @@ export const Icons = ({ name, className }) => {
         return <Arrow />
       case 'icon-menu':
         return <Menu />
+      case 'icon-plus':
+        return <Plus />
+      case 'icon-minus':
+        return <Minus />
       default:
         return <></>
     }
