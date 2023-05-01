@@ -1,0 +1,5 @@
+.pagination {
+  &List {
+    @apply flex items-start justify-center gap-3 mt-12;
+  }
+}

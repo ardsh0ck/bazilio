@@ -4,6 +4,7 @@ import { ReactComponent as Instagram } from '../../../assets/images/svg/icon-ins
 import { ReactComponent as Facebook } from '../../../assets/images/svg/icon-facebook.svg'
 import { ReactComponent as Pepper } from '../../../assets/images/svg/icon-pepper.svg'
 import { ReactComponent as Arrow } from '../../../assets/images/svg/icon-arrow.svg'
+import { ReactComponent as Menu } from '../../../assets/images/svg/icon-menu.svg'
 import clsx from 'clsx'
 
 export const Icons = ({ name, className }) => {
@@ -19,6 +20,8 @@ export const Icons = ({ name, className }) => {
         return <Pepper />
       case 'icon-arrow':
         return <Arrow />
+      case 'icon-menu':
+        return <Menu />
       default:
         return <></>
     }

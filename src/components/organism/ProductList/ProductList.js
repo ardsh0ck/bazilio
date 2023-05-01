@@ -13,16 +13,7 @@ const ProductList = ({ data, type }) => {
         {data.map((product) => {
           return (
             <li className={styles.catalogItem} key={product.id}>
-              <ProductCard
-                image={product.image}
-                title={product.title}
-                weight={product.weight}
-                contents={product.contents}
-                price={product.price}
-                hot={product.hot}
-                labelType={product?.label?.type}
-                label={product?.label?.text}
-              />
+              <ProductCard {...product} />
             </li>
           )
         })}

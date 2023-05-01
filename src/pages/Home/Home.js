@@ -22,7 +22,7 @@ const Home = () => {
           </Link>
         </div>
 
-        <ProductList data={pizza.slice(0, 4)} type="scroll" />
+        <ProductList data={pizza.products.slice(0, 4)} type="scroll" />
       </section>
     </div>
   )

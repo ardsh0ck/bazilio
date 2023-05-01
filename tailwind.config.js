@@ -34,6 +34,7 @@ module.exports = {
       'secondary-accent': '#0bb7c2',
       'secondary-accent-stressed': '#ec5602',
       'error-sale': '#f93c00',
+      'borders-color': '#e7e7e7',
       white: '#fff',
       background: '#f9f9f9',
       blue: '#7d00f9',

@@ -1,3 +1,19 @@
 .breadcrumbs {
   @apply py-[25px];
+
+  &List {
+    @apply gap-[8px] flex items-center text-sm;
+  }
+
+  &Link {
+    @apply gap-[8px] flex items-baseline text-main-black-50;
+
+    svg {
+      @apply h-2;
+    }
+  }
+
+  &Current {
+    @apply font-semibold;
+  }
 }

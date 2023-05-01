@@ -1,0 +1,21 @@
+.cart {
+  &Button {
+    @apply h-[44px] rounded-[15px] flex items-center gap-1 px-3 border border-solid border-borders-color transition-all duration-300;
+
+    @media (hover: hover) {
+      @apply hover:border-main-accent;
+    }
+
+    &Title {
+      @apply pr-2 text-lg font-semibold;
+    }
+
+    &Icon {
+      @apply text-main-accent;
+    }
+
+    &Counter {
+      @apply min-w-[18px] h-[18px] flex items-center justify-center px-1 rounded-2xl bg-main-accent text-sm text-white font-bold;
+    }
+  }
+}

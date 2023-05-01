@@ -1,9 +1,10 @@
+import { Outlet } from 'react-router-dom'
 import styles from './Drinks.module.scss'
 
 const Drinks = () => {
   return (
     <div className={styles.drinks}>
-      <div className="inner">Drinks</div>
+      <Outlet />
     </div>
   )
 }

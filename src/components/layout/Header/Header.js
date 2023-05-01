@@ -3,6 +3,8 @@ import styles from './Header.module.scss'
 import Navigation from '../../organism/Navigation/Navigation'
 import Button from '../../organism/Button/Button'
 import { Link } from 'react-router-dom'
+import ShoppingCart from '../../organism/ShoppingCart/ShoppingCart'
+import SideMenu from '../../organism/SideMenu/SideMenu'
 
 const Header = () => {
   return (
@@ -46,6 +48,11 @@ const Header = () => {
 
       <div className={clsx(styles.headerInner, 'inner')}>
         <Navigation />
+
+        <div className="flex items-center gap-2">
+          <ShoppingCart />
+          <SideMenu />
+        </div>
       </div>
     </header>
   )

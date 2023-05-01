@@ -37,7 +37,7 @@
   }
 
   &Inner {
-    @apply py-4;
+    @apply flex items-center justify-between py-4;
   }
 
   &Logo {

@@ -1,0 +1,13 @@
+.sideMenu {
+  &Button {
+    @apply w-[44px] h-[44px] rounded-[15px] flex items-center justify-center border border-solid border-borders-color transition-all duration-300;
+
+    @media (hover: hover) {
+      @apply hover:border-main-accent;
+    }
+
+    svg {
+      @apply w-4 h-4;
+    }
+  }
+}
