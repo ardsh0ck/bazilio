@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     extend: {},
     spacing: {
+      0: '0',
       0.5: '2px',
       1: '5px',
       2: '10px',
@@ -28,6 +29,7 @@ module.exports = {
     },
     colors: {
       'main-black': '#262626',
+      'main-black-80': '#333333',
       'main-black-50': '#939393',
       'secondary-black': '#5a5a5a',
       'main-accent': '#ff6b00',

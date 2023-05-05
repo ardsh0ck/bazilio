@@ -20,4 +20,78 @@
       }
     }
   }
+
+  &Text {
+    @apply relative block;
+
+    .formControlLabel {
+      @apply absolute left-3 text-main-black-50 transition-all duration-300;
+    }
+
+    input ~ .formControlLabel {
+      @apply top-1/2 -translate-y-1/2;
+    }
+
+    textarea {
+      @apply p-3;
+
+      & ~ .formControlLabel {
+        @apply top-6 -translate-y-1/2;
+      }
+    }
+
+    input,
+    textarea {
+      @apply rounded-[15px] text-[17px] w-full px-3 border border-borders-color transition-colors duration-300;
+
+      &:focus {
+        @apply border-main-black-80 outline-0;
+      }
+
+      &:focus ~ .formControlLabel,
+      &:not(:placeholder-shown) ~ .formControlLabel {
+        @apply px-[2px] top-[0] text-[12px] left-3 bg-white text-main-black-50;
+      }
+    }
+
+    input {
+      @apply h-[52px];
+    }
+
+    input:required ~ .formControlLabel::after,
+    textarea:required ~ .formControlLabel::after {
+      @apply text-error-sale;
+      content: '*';
+    }
+  }
+
+  &Toggle {
+    @apply rounded-[15px] flex items-center w-max border border-solid border-borders-color overflow-hidden;
+
+    input {
+      @apply w-[0px] h-[0px] block overflow-hidden;
+    }
+
+    .formControlLabel {
+      @apply rounded-[15px] static flex items-center h-10 px-5 cursor-pointer transition-all duration-300;
+    }
+
+    &Item {
+      input:checked ~ .formControlLabel {
+        @apply bg-main-accent text-white;
+      }
+    }
+  }
+
+  &Select {
+    select {
+      @apply h-[52px] rounded-[15px] pl-3 pr-10 border border-solid border-borders-color appearance-none bg-no-repeat;
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 7L11 1' stroke='%23939393' stroke-width='2'/%3E%3C/svg%3E%0A");
+      background-position: right 15px center;
+
+      &::-ms-expand {
+        @apply hidden;
+      }
+    }
+  }
 }

@@ -7,6 +7,7 @@ import { ReactComponent as Arrow } from '../../../assets/images/svg/icon-arrow.s
 import { ReactComponent as Menu } from '../../../assets/images/svg/icon-menu.svg'
 import { ReactComponent as Plus } from '../../../assets/images/svg/icon-plus.svg'
 import { ReactComponent as Minus } from '../../../assets/images/svg/icon-minus.svg'
+import { ReactComponent as Trash } from '../../../assets/images/svg/icon-trash.svg'
 import clsx from 'clsx'
 
 export const Icons = ({ name, className }) => {
@@ -28,6 +29,8 @@ export const Icons = ({ name, className }) => {
         return <Plus />
       case 'icon-minus':
         return <Minus />
+      case 'icon-trash':
+        return <Trash />
       default:
         return <></>
     }

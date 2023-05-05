@@ -1,0 +1,57 @@
+.checkout {
+  @apply max-w-[960px] w-full mx-auto md:px-6;
+
+  &Heading {
+    @apply max-w-[900px] mx-auto mb-8;
+  }
+
+  &Block {
+    @apply md:rounded-[20px] mb-2 md:mb-4 p-4 md:p-8 lg:p-10 bg-white;
+    box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.03);
+  }
+
+  &Products {
+    @apply max-h-[450px] overflow-auto;
+
+    &List {
+    }
+
+    &Item {
+      @apply pb-4 border-solid border-b border-borders-color;
+
+      & + & {
+        @apply mt-4;
+      }
+
+      &:last-child {
+        @apply border-none p-0;
+      }
+    }
+  }
+
+  &Form {
+    &Fieldset {
+      @apply mb-8;
+
+      &:last-child {
+        @apply m-[0];
+      }
+    }
+
+    &Legend {
+      @apply mb-5 md:mb-6 text-xl font-semibold;
+    }
+
+    &Footer {
+      @apply flex items-center justify-between py-6;
+
+      &Total {
+        @apply text-2xl;
+      }
+    }
+  }
+
+  &Sum {
+    @apply text-2xl;
+  }
+}
