@@ -1,0 +1,42 @@
+.categories {
+  @apply grid gap-2 md:gap-3 lg:gap-4;
+  grid-template-columns: repeat(3, 1fr);
+
+  &Item {
+  }
+
+  &Card {
+    @apply rounded-[30px] relative block py-6 px-8 overflow-hidden bg-white transition-all duration-300;
+    box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.03);
+
+    @media (hover: hover) {
+      &:hover {
+        box-shadow: 0px 7px 25px rgba(0, 0, 0, 0.15);
+
+        .categoriesCardArrow {
+          @apply translate-x-4;
+        }
+      }
+    }
+
+    &Title {
+      @apply mb-2 text-xl lg:text-2xl font-semibold;
+    }
+
+    &Price {
+      @apply flex gap-0.5 items-end mb-4 text-main-black-50;
+
+      small {
+        @apply text-[90%];
+      }
+    }
+
+    &Arrow {
+      @apply rounded-[15px] flex items-center justify-center w-8 h-8 border border-solid border-main-accent text-main-accent transition-all duration-300;
+    }
+
+    &Picture {
+      @apply absolute right-0 top-0 h-full w-auto;
+    }
+  }
+}

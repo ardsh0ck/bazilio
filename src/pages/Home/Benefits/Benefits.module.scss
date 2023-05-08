@@ -1,0 +1,29 @@
+.benefits {
+  @apply mb-[140px];
+
+  &List {
+    @apply flex gap-12 items-center;
+  }
+
+  &Item {
+    &Icon {
+      @apply justify-start mb-5 text-secondary-accent;
+    }
+
+    &Heading {
+      @apply leading-[25px] block mb-2 text-lg font-semibold;
+    }
+
+    &Description {
+      @apply text-[15px] leading-[21px] text-secondary-black;
+    }
+
+    &Picture {
+      @apply max-w-[407px] w-full shrink-0;
+
+      img {
+        @apply w-full;
+      }
+    }
+  }
+}
