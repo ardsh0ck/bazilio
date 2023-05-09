@@ -2,7 +2,7 @@
   @apply max-w-[1440px] md:max-w-[1460px] w-full mx-auto;
 
   &List {
-    @apply grid gap-4 scroll-mx-6 px-6;
+    @apply grid gap-4 scroll-mx-4 md:scroll-mx-6 px-4 md:px-6;
 
     @screen md {
       grid-template-columns: repeat(2, 1fr);

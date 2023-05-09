@@ -1,5 +1,5 @@
 .productCard {
-  @apply relative bg-white p-6 transition-all duration-300;
+  @apply relative bg-white p-4 md:p-6 transition-all duration-300;
   border-radius: 20px;
   box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.03);
 

@@ -1,0 +1,11 @@
+.scroll {
+  @apply fixed left-0 right-0 z-0 bottom-14 flex justify-end w-full;
+
+  &Button {
+    @apply w-[44px] h-[44px] rounded-[15px] flex items-center justify-center border border-secondary-accent-stressed bg-background bg-opacity-50;
+
+    svg {
+      @apply text-main-accent -rotate-90;
+    }
+  }
+}

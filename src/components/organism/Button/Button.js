@@ -15,7 +15,7 @@ const Button = ({
 }) => {
   return (
     <>
-      {type === 'link' ? (
+      {href ? (
         <Link
           className={clsx(
             styles.button,

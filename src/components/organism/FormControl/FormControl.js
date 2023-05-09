@@ -16,6 +16,7 @@ const FormControl = ({
   toggle,
   select,
   error,
+  color,
   className,
 }) => {
   return (
@@ -34,6 +35,7 @@ const FormControl = ({
                 type === 'textarea',
               [styles.formControlCheckbox]: type === 'checkbox',
               [styles.formControlSelect]: type === 'select',
+              [styles.formControlBgColor]: color === 'bg',
             },
             className
           )}

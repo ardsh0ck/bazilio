@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 import { Icons } from '../../components/organism/Icons/Icons'
 import Categories from './Categories/Categories'
 import Benefits from './Benefits/Benefits'
+import Instagram from './Instagram/Instagram'
 
 const Home = () => {
   return (
@@ -31,6 +32,8 @@ const Home = () => {
       </section>
 
       <Benefits />
+
+      <Instagram />
     </div>
   )
 }

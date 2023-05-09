@@ -1,4 +1,75 @@
 .footer {
-  @apply mt-auto py-14 border-solid border-t;
-  border-color: #ececec;
+  @apply mt-auto py-8 md:py-10 xl:py-14 border-solid border-t border-borders-color;
+
+  &Inner {
+    @apply grid gap-8 xl:gap-20;
+
+    @screen md {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @screen xl {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    &Item {
+      &:last-child {
+        @apply xl:col-start-5 xl:text-right;
+      }
+    }
+  }
+
+  &Label {
+    @apply mb-3 md:mb-6 text-lg text-main-black-50;
+  }
+
+  &List {
+    @apply relative z-10;
+
+    &Navigation {
+      @apply flex flex-wrap;
+
+      .footerListItem {
+        @apply w-1/2;
+
+        &:first-child {
+          @apply hidden;
+        }
+      }
+    }
+
+    &Item {
+      @apply mb-3;
+    }
+
+    &Link {
+      @apply text-lg;
+    }
+  }
+
+  &Socials {
+    @apply flex items-center gap-2;
+
+    &Facebook {
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    &Instagram {
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+  &Logo {
+    @apply w-[161px] h-[28px] inline-block mb-5 text-secondary-accent;
+  }
+
+  &Copyright {
+    @apply text-[15px] text-main-black-50;
+  }
 }

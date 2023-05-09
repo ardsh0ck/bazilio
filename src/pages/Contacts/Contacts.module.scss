@@ -1,2 +1,29 @@
 .contacts {
+  &List {
+    @apply grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-10;
+
+    &Label {
+      @apply md:text-[17px] mb-1 md:mb-2 lg:mb-3 text-sm text-main-black-50;
+    }
+
+    &Value {
+      @apply text-[#0036A0] text-xl lg:text-2xl;
+    }
+  }
+
+  &Form {
+    @apply mb-8 md:mb-10 lg:mb-14;
+
+    &Submit {
+      @apply w-full;
+
+      svg {
+        @apply w-[14px] h-[14px] -rotate-45;
+      }
+    }
+  }
+
+  &Map {
+    @apply rounded-[30px] overflow-hidden;
+  }
 }

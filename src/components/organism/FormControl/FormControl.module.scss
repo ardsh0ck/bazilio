@@ -65,6 +65,21 @@
     }
   }
 
+  &BgColor {
+    input,
+    textarea {
+      @apply bg-background;
+    }
+
+    input,
+    textarea {
+      &:focus ~ .formControlLabel,
+      &:not(:placeholder-shown) ~ .formControlLabel {
+        @apply bg-background;
+      }
+    }
+  }
+
   &Toggle {
     @apply rounded-[15px] flex items-center w-max border border-solid border-borders-color overflow-hidden;
 

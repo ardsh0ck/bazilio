@@ -7,7 +7,7 @@ import catDrinks from '../../../assets/images/design/cat-drinks.png'
 
 const Categories = () => {
   return (
-    <section className="inner mb-14">
+    <section className="mb-2 md:mb-6 lg:mb-8">
       <ul className={styles.categories}>
         <li className={styles.categoriesItem}>
           <Link to="/pizza" className={styles.categoriesCard}>

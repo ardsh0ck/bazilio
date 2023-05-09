@@ -1,10 +1,31 @@
 .navigation {
+  @apply relative;
+
+  &::before {
+    @apply absolute top-0 -left-4 -right-4 block border-t border-borders-color;
+    content: '';
+
+    @screen md {
+      @apply hidden;
+    }
+  }
+
   &List {
-    @apply flex items-center gap-8;
+    @apply flex items-center justify-between md:justify-normal md:gap-6 lg:gap-8 pt-4 md:pt-0;
+  }
+
+  &Item {
+    &:first-child {
+      @apply hidden md:flex;
+    }
   }
 
   &Logo {
-    @apply block pr-2 text-secondary-accent;
+    @apply pr-2 text-secondary-accent;
+
+    svg {
+      @apply h-[18px] md:h-[28px] lg:h-[32px] w-[103px] md:w-[159px] lg:w-[181px];
+    }
   }
 
   &Link {
@@ -12,9 +33,11 @@
   }
 
   &LinkActive:not(&Logo) {
-    &::after {
-      @apply h-[2px] mt-[8px] absolute left-1/2 -translate-x-1/2 block w-4 rounded-lg bg-main-accent;
-      content: '';
+    @screen md {
+      &::after {
+        @apply h-[2px] mt-[8px] absolute left-1/2 -translate-x-1/2 block w-4 rounded-lg bg-main-accent;
+        content: '';
+      }
     }
   }
 

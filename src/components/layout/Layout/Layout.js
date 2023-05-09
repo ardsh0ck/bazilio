@@ -3,17 +3,20 @@ import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import styles from './Layout.module.scss'
 import clsx from 'clsx'
+import ScrollToTop from '../../organism/ScrollToTop/ScrollToTop'
 
-const Layout = () => {
+const Layout = ({ navigation }) => {
   return (
     <div className={clsx(styles.layout)}>
-      <Header />
+      <Header navigation={navigation} />
 
       <main className={styles.layoutContent}>
         <Outlet />
       </main>
 
-      <Footer />
+      <Footer navigation={navigation} />
+
+      <ScrollToTop />
     </div>
   )
 }
