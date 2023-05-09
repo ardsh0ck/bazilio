@@ -1,13 +1,29 @@
 .benefits {
-  @apply mb-[140px];
+  @apply mb-[140px] py-10 md:py-12 xl:py-14 border border-solid border-y-borders-color border-x-0;
+
+  &Heading {
+    @apply leading-[34px] relative mb-8 text-2xl font-semibold;
+    @apply md:leading-[42px] md:mb-10 md:text-3xl;
+    @apply xl:leading-[48px] xl:text-[34px] xl:mb-0 xl:-bottom-4;
+  }
 
   &List {
-    @apply flex gap-12 items-center;
+    @apply grid gap-8 xl:gap-12 items-center;
+
+    @screen md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @screen xl {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 
   &Item {
+    @apply flex xl:block gap-5;
+
     &Icon {
-      @apply justify-start mb-5 text-secondary-accent;
+      @apply justify-start w-10 md:w-12 xl:w-15 mb-5 text-secondary-accent;
     }
 
     &Heading {
@@ -19,7 +35,7 @@
     }
 
     &Picture {
-      @apply max-w-[407px] w-full shrink-0;
+      @apply w-[407px] hidden shrink-0 xl:block;
 
       img {
         @apply w-full;
