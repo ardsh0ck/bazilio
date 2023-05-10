@@ -56,9 +56,37 @@
         @apply text-2xl;
       }
     }
+
+    &TakeAway {
+      @apply flex items-center gap-1 mb-3 text-lg;
+      height: 52px;
+    }
   }
 
   &Sum {
     @apply text-2xl;
+  }
+
+  &Success {
+    @apply pt-16 text-center;
+    padding-bottom: 120px;
+
+    &Icon {
+      @apply mb-8 text-main-accent;
+    }
+
+    &Heading {
+      @apply mb-3 font-semibold;
+      font-size: 34px;
+    }
+
+    &Text {
+      @apply w-4/5 mb-7 mx-auto text-lg text-secondary-black;
+    }
+
+    &Button {
+      @apply w-full mx-auto;
+      max-width: 320px;
+    }
   }
 }

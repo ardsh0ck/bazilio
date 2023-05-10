@@ -1,2 +1,13 @@
 .delivery {
+  &Description {
+    @apply mb-8 xl:mb-10 text-secondary-black text-lg;
+
+    p + p {
+      @apply mt-2;
+    }
+  }
+
+  &Map {
+    @apply rounded-[30px] overflow-hidden;
+  }
 }

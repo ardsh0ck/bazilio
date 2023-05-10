@@ -1,0 +1,17 @@
+.modal {
+  @apply fixed left-0 top-0 z-20 flex items-center justify-center h-screen w-full bg-main-black bg-opacity-50;
+
+  &Header {
+    @apply flex justify-between gap-4;
+  }
+
+  &Close {
+    @apply w-4 h-4 ml-auto p-0 bg-none text-main-black-50 hover:bg-white hover:text-main-accent;
+  }
+
+  &Inner {
+    @apply w-full p-6 bg-white;
+    max-width: 660px;
+    border-radius: 30px;
+  }
+}

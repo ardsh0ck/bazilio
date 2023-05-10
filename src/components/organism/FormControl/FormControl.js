@@ -79,9 +79,13 @@ const FormControl = ({
           )}
 
           {type === 'select' && (
-            <select>
-              {select.map((item) => {
-                return <option>{item}</option>
+            <select value={value} onChange={onChangeHandle} name={name}>
+              {select.map((item, index) => {
+                return (
+                  <option value={item.value} key={index + item.value}>
+                    {item.label}
+                  </option>
+                )
               })}
             </select>
           )}
@@ -101,16 +105,17 @@ const FormControl = ({
               <label
                 htmlFor={id}
                 className={styles.formControlToggleItem}
-                key={item.id}
+                key={item.id + item.value}
               >
                 <div className={styles.formControlToggleItem}>
                   <input
                     type="radio"
+                    id={item.id}
                     name={item.name}
                     value={item.value}
                     onChange={item.onChange}
-                    id={item.id}
                     required={required}
+                    checked={item.checked}
                   />
                   <div className={styles.formControlLabel}>{item.label}</div>
                 </div>

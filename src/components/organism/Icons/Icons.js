@@ -12,6 +12,9 @@ import { ReactComponent as Trash } from '../../../assets/images/svg/icon-trash.s
 import { ReactComponent as BenefitsOne } from '../../../assets/images/svg/icon-benefits-1.svg'
 import { ReactComponent as BenefitsTwo } from '../../../assets/images/svg/icon-benefits-2.svg'
 import { ReactComponent as BenefitsThree } from '../../../assets/images/svg/icon-benefits-3.svg'
+import { ReactComponent as Location } from '../../../assets/images/svg/icon-location.svg'
+import { ReactComponent as Close } from '../../../assets/images/svg/icon-close.svg'
+import { ReactComponent as CheckRounded } from '../../../assets/images/svg/icon-check-rounded.svg'
 import clsx from 'clsx'
 
 export const Icons = ({ name, className }) => {
@@ -43,6 +46,12 @@ export const Icons = ({ name, className }) => {
         return <BenefitsTwo />
       case 'icon-benefits-3':
         return <BenefitsThree />
+      case 'icon-location':
+        return <Location />
+      case 'icon-close':
+        return <Close />
+      case 'icon-check-rounded':
+        return <CheckRounded />
       default:
         return <></>
     }
