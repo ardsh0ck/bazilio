@@ -5,11 +5,12 @@
     @apply relative w-1/2 shrink-0;
 
     img {
-      @apply max-w-[500px] w-full;
+      @apply w-full;
+      max-width: 500px;
     }
 
     &Label {
-      @apply top-[0] left-[0];
+      @apply top-0 left-0;
     }
   }
 
@@ -33,7 +34,8 @@
     }
 
     &Text {
-      @apply leading-[1.4] text-main-black-50;
+      @apply text-main-black-50;
+      line-height: 1.4;
     }
   }
 
@@ -59,7 +61,7 @@
     }
 
     &Item {
-      @apply w-[45%];
+      width: 45%;
     }
 
     &Label {

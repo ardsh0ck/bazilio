@@ -44,7 +44,18 @@
     @apply block md:hidden pr-2 text-secondary-accent;
 
     svg {
-      @apply h-[18px] md:h-[28px] lg:h-[32px] w-[103px] md:w-[159px] lg:w-[181px];
+      height: 18px;
+      width: 103px;
+
+      @media (min-width: 768px) {
+        height: 28px;
+        width: 159px;
+      }
+
+      @media (min-width: 1024px) {
+        height: 32px;
+        width: 181px;
+      }
     }
   }
 

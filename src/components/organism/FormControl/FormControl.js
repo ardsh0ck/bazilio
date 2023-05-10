@@ -65,6 +65,11 @@ const FormControl = ({
           {type === 'textarea' && (
             <>
               <textarea
+                type={type}
+                name={name}
+                value={value}
+                onChange={onChangeHandle}
+                id={id}
                 required={required}
                 rows={rows}
                 placeholder=" "

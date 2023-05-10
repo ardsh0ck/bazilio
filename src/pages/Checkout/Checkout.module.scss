@@ -1,17 +1,24 @@
 .checkout {
-  @apply max-w-[960px] w-full mx-auto md:px-6;
+  @apply w-full mx-auto md:px-6;
+  max-width: 960px;
 
   &Heading {
-    @apply max-w-[900px] mx-auto mb-8;
+    @apply mx-auto mb-8;
+    max-width: 900px;
   }
 
   &Block {
-    @apply md:rounded-[20px] mb-2 md:mb-4 p-4 md:p-8 lg:p-10 bg-white;
+    @apply mb-2 md:mb-4 p-4 md:p-8 lg:p-10 bg-white;
     box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.03);
+
+    @screen md {
+      border-radius: 20px;
+    }
   }
 
   &Products {
-    @apply max-h-[450px] overflow-auto;
+    @apply overflow-auto;
+    max-height: 450px;
 
     &List {
     }
@@ -34,7 +41,7 @@
       @apply mb-8;
 
       &:last-child {
-        @apply m-[0];
+        @apply m-0;
       }
     }
 

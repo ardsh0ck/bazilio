@@ -24,7 +24,18 @@
     @apply pr-2 text-secondary-accent;
 
     svg {
-      @apply h-[18px] md:h-[28px] lg:h-[32px] w-[103px] md:w-[159px] lg:w-[181px];
+      width: 103px;
+      height: 18px;
+
+      @screen md {
+        height: 28px;
+        width: 159px;
+      }
+
+      @screen lg {
+        width: 181px;
+        height: 32px;
+      }
     }
   }
 
@@ -35,7 +46,9 @@
   &LinkActive:not(&Logo) {
     @screen md {
       &::after {
-        @apply h-[2px] mt-[8px] absolute left-1/2 -translate-x-1/2 block w-4 rounded-lg bg-main-accent;
+        @apply absolute left-1/2 -translate-x-1/2 block w-4 rounded-lg bg-main-accent;
+        height: 2px;
+        margin-top: 8px;
         content: '';
       }
     }

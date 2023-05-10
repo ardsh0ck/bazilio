@@ -12,9 +12,12 @@ const Footer = ({ navigation }) => {
         <div className={styles.footerInnerItem}>
           <h6 className={styles.footerLabel}>Навігація</h6>
           <ul className={clsx(styles.footerList, styles.footerListNavigation)}>
-            {navigation.map((link) => {
+            {navigation.map((link, index) => {
               return (
-                <li className={styles.footerListItem}>
+                <li
+                  className={styles.footerListItem}
+                  key={'footerNavItem' + index}
+                >
                   <Link to={link.url} className={styles.footerNavigationLink}>
                     {link.text}
                   </Link>

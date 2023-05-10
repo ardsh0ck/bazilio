@@ -1,10 +1,15 @@
 .categories {
-  @apply max-w-[1440px] grid gap-2 w-full mx-auto overflow-auto scroll-mx-4 px-4 pb-6;
-  @apply md:max-w-[1460px] md:gap-3 md:scroll-mx-6 md:px-6;
+  @apply grid gap-2 w-full mx-auto overflow-auto scroll-mx-4 px-4 pb-6;
+  @apply md:gap-3 md:scroll-mx-6 md:px-6;
   @apply lg:gap-4;
   grid-template-columns: repeat(3, 1fr);
+  max-width: 1440px;
   -ms-overflow-style: none;
   scrollbar-width: none;
+
+  @screen md {
+    max-width: 1460px;
+  }
 
   &::-webkit-scrollbar {
     display: none;
@@ -14,9 +19,16 @@
   }
 
   &Card {
-    @apply min-w-[230px] rounded-[20px] relative block py-4 px-6 overflow-hidden bg-white transition-all duration-300;
-    @apply md:min-w-[284px] md:rounded-[30px] md:py-6 md:px-8;
+    @apply relative block py-4 px-6 overflow-hidden bg-white transition-all duration-300;
+    @apply md:py-6 md:px-8;
+    min-width: 230px;
+    border-radius: 20px;
     box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.03);
+
+    @screen md {
+      min-width: 284px;
+      border-radius: 30px;
+    }
 
     @media (hover: hover) {
       &:hover {
@@ -33,16 +45,18 @@
     }
 
     &Price {
-      @apply text-[15px] flex gap-0.5 items-end mb-4 text-main-black-50;
+      @apply flex gap-0.5 items-end mb-4 text-main-black-50;
+      font-size: 15px;
 
       small {
-        @apply text-[90%];
+        font-size: 90%;
       }
     }
 
     &Arrow {
-      @apply rounded-[15px] inline-flex items-center justify-center text-main-accent transition-all duration-300;
+      @apply inline-flex items-center justify-center text-main-accent transition-all duration-300;
       @apply lg:w-8 lg:h-8 lg:border lg:border-solid lg:border-main-accent;
+      border-radius: 15px;
     }
 
     &Picture {

@@ -2,11 +2,14 @@
   @apply flex items-start gap-4;
 
   &Picture {
-    @apply max-w-[100px] w-full shrink-0;
+    @apply w-full shrink-0;
+    max-width: 100px;
   }
 
   &Header {
-    @apply text-[15px] leading-[21px] flex items-center justify-between mb-1 font-semibold;
+    @apply flex items-center justify-between mb-1 font-semibold;
+    font-size: 15px;
+    line-height: 21px;
   }
 
   &Toggle {
@@ -18,7 +21,7 @@
 
     &Opened {
       svg {
-        @apply rotate-[270deg];
+        transform: rotate(270deg);
       }
     }
   }
@@ -36,22 +39,29 @@
   }
 
   &Weight {
-    @apply text-[15px] leading-[21px] mb-1 text-main-accent;
+    @apply mb-1 text-main-accent;
+    font-size: 15px;
+    line-height: 21px;
   }
 
   &Contents {
-    @apply text-[15px] leading-[21px] mb-4 text-secondary-black line-clamp-1;
+    @apply mb-4 text-secondary-black line-clamp-1;
+    font-size: 15px;
+    line-height: 21px;
   }
 
   &Price {
-    @apply text-[15px] leading-[21px] w-full md:w-auto font-semibold;
+    @apply w-full md:w-auto font-semibold;
+    font-size: 15px;
+    line-height: 21px;
   }
 
   &Footer {
     @apply flex flex-wrap items-center gap-3 md:gap-4;
 
     &Button {
-      @apply rounded-[10px] flex items-center justify-center w-6 h-6 border border-borders-color transition-colors duration-300;
+      @apply flex items-center justify-center w-6 h-6 border border-borders-color transition-colors duration-300;
+      border-radius: 10px;
 
       svg {
         @apply text-main-black-50;
@@ -82,7 +92,8 @@
 
     .productFooterButton {
       svg {
-        @apply w-[8px] h-[8px];
+        width: 8px;
+        height: 8px;
       }
     }
 

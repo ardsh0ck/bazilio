@@ -10,8 +10,8 @@ const Navigation = ({ navigation, className }) => {
           return (
             <li
               className={clsx(styles.navigationItem, {
-                ['hidden lg:block']: link.bigScreen && !link.smallScreen,
-                ['sm:!block md:!hidden']: link.smallScreen,
+                'hidden lg:block': link.bigScreen && !link.smallScreen,
+                'sm:!block md:!hidden lg:!block': link.smallScreen,
               })}
               key={link.id}
             >

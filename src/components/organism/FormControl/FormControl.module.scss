@@ -7,12 +7,15 @@
     }
 
     .formControlLabel::before {
-      @apply w-[24px] h-[24px] rounded-[8px] shrink-0 block border border-borders-color transition-colors duration-300;
+      @apply shrink-0 block border border-borders-color transition-colors duration-300;
+      width: 24px;
+      height: 24px;
+      border-radius: 8px;
       content: '';
     }
 
     input {
-      @apply w-[0px] h-[0px] block overflow-hidden;
+      @apply w-0 h-0 block overflow-hidden;
 
       &:checked ~ .formControlLabel::before {
         @apply border-main-accent bg-no-repeat bg-center;
@@ -42,7 +45,9 @@
 
     input,
     textarea {
-      @apply rounded-[15px] text-[17px] w-full px-3 border border-borders-color transition-colors duration-300;
+      @apply w-full px-3 border border-borders-color transition-colors duration-300;
+      font-size: 17px;
+      border-radius: 15px;
 
       &:focus {
         @apply border-main-black-80 outline-0;
@@ -50,12 +55,15 @@
 
       &:focus ~ .formControlLabel,
       &:not(:placeholder-shown) ~ .formControlLabel {
-        @apply px-[2px] top-[0] text-[12px] left-3 bg-white text-main-black-50;
+        @apply top-0 left-3 bg-white text-main-black-50;
+        padding-left: 2px;
+        padding-right: 2px;
+        font-size: 12px;
       }
     }
 
     input {
-      @apply h-[52px];
+      height: 52px;
     }
 
     input:required ~ .formControlLabel::after,
@@ -81,14 +89,16 @@
   }
 
   &Toggle {
-    @apply rounded-[15px] flex items-center w-max border border-solid border-borders-color overflow-hidden;
+    @apply flex items-center w-max border border-solid border-borders-color overflow-hidden;
+    border-radius: 15px;
 
     input {
-      @apply w-[0px] h-[0px] block overflow-hidden;
+      @apply w-0 h-0 block overflow-hidden;
     }
 
     .formControlLabel {
-      @apply rounded-[15px] static flex items-center h-10 px-5 cursor-pointer transition-all duration-300;
+      @apply static flex items-center h-10 px-5 cursor-pointer transition-all duration-300;
+      border-radius: 15px;
     }
 
     &Item {
@@ -100,7 +110,8 @@
 
   &Select {
     select {
-      @apply h-[52px] rounded-[15px] pl-3 pr-10 border border-solid border-borders-color appearance-none bg-no-repeat;
+      @apply h-[52px] pl-3 pr-10 border border-solid border-borders-color appearance-none bg-no-repeat;
+      border-radius: 15px;
       background-image: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 7L11 1' stroke='%23939393' stroke-width='2'/%3E%3C/svg%3E%0A");
       background-position: right 15px center;
 

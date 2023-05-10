@@ -42,6 +42,23 @@ module.exports = {
       blue: '#7d00f9',
       green: '#11ba22',
     },
+    // fontSize: {
+    //   sm: '0.8rem',
+    //   base: '1rem',
+    //   xl: '1.25rem',
+    //   '2xl': '1.563rem',
+    //   '3xl': '1.953rem',
+    //   '4xl': '2.441rem',
+    //   '5xl': '3.052rem',
+    //   15: '0.9rem',
+    //   17: '1.1rem',
+    // },
+    // borderRadius: {
+    //   10: '10px',
+    //   15: '15px',
+    //   20: '20px',
+    //   30: '30px',
+    // },
   },
   plugins: [],
 }

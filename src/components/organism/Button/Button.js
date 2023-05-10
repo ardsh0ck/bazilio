@@ -12,6 +12,7 @@ const Button = ({
   onClickHendler,
   href,
   className,
+  disabled,
 }) => {
   return (
     <>
@@ -35,6 +36,7 @@ const Button = ({
         <button
           type={type}
           onClick={onClickHendler}
+          disabled={disabled}
           className={clsx(
             styles.button,
             {

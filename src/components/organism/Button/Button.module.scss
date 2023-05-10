@@ -11,6 +11,10 @@
     @apply bg-secondary-accent-stressed;
   }
 
+  &:disabled {
+    @apply bg-main-black-50 cursor-default;
+  }
+
   &Primary {
     @apply bg-main-accent;
   }

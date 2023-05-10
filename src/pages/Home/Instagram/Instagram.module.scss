@@ -3,14 +3,27 @@
     @apply flex justify-between items-center mb-6 md:mb-8;
 
     &Heading {
-      @apply leading-[34px] mb-2 text-xl font-semibold;
-      @apply md:leading-[42px] md:text-3xl md:mb-3;
-      @apply xl:text-[34px] xl:leading-[48px];
+      @apply mb-2 md:mb-3 text-xl md:text-3xl font-semibold;
+      line-height: 34px;
+
+      @screen md {
+        line-height: 42px;
+      }
+
+      @screen xl {
+        font-size: 34px;
+        line-height: 48px;
+      }
     }
 
     &Caption {
-      @apply text-[17px] leading-[24px] text-secondary-black;
-      @apply leading-[26px] xl:text-lg;
+      @apply xl:text-lg text-secondary-black;
+      font-size: 17px;
+      line-height: 24px;
+
+      @screen xl {
+        line-height: 26px;
+      }
     }
   }
 
@@ -23,7 +36,8 @@
     }
 
     &Item {
-      @apply aspect-square overflow-hidden rounded-[30px];
+      @apply aspect-square overflow-hidden;
+      border-radius: 30px;
 
       &:nth-child(2) {
         grid-area: 2 / 1 / span 2 / span 2;

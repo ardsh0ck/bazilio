@@ -1,5 +1,6 @@
-import clsx from 'clsx'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import clsx from 'clsx'
 import styles from './Contacts.module.scss'
 import Breadcrumbs from '../../components/organism/Breadcrumbs/Breadcrumbs'
 import FormControl from '../../components/organism/FormControl/FormControl'
@@ -7,6 +8,42 @@ import Button from '../../components/organism/Button/Button'
 import contacts from '../../data/contacts'
 
 const Contacts = () => {
+  const initialFormData = {
+    name: '',
+    phone: '',
+    message: '',
+  }
+  const [formData, setFormData] = useState(initialFormData)
+  const [submitDisabled, setSubmitDisabled] = useState(true)
+  const handleInputChange = (event) => {
+    const { name, value } = event.target
+    setFormData({ ...formData, [name]: value })
+  }
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    const formDataToSend = new FormData()
+    formDataToSend.append('name', formData.name)
+    formDataToSend.append('phone', formData.phone)
+    formDataToSend.append('message', formData.message)
+    try {
+      console.log(formData)
+      alert('Submitted')
+    } catch (error) {
+      console.error(error)
+    }
+  }
+  useEffect(() => {
+    if (
+      formData.name !== '' &&
+      formData.phone !== '' &&
+      formData.message !== ''
+    ) {
+      setSubmitDisabled(false)
+    } else {
+      setSubmitDisabled(true)
+    }
+  }, [formData])
+
   return (
     <>
       <Breadcrumbs />
@@ -33,7 +70,7 @@ const Contacts = () => {
           </div>
         </dl>
 
-        <form className={styles.contactsForm}>
+        <form onSubmit={handleSubmit} className={styles.contactsForm}>
           <fieldset>
             <legend className="heading mb-5 md:mb-6 lg:mb-8">
               Зворотній зв’язок
@@ -42,6 +79,9 @@ const Contacts = () => {
             <div className="grid lg:grid-cols-2 gap-2 lg:gap-4 mb-2 lg:mb-4">
               <FormControl
                 type="text"
+                name="name"
+                value={formData.name}
+                onChangeHandle={handleInputChange}
                 color="bg"
                 label="Введіть им’я"
                 required
@@ -50,6 +90,9 @@ const Contacts = () => {
 
               <FormControl
                 type="text"
+                name="phone"
+                value={formData.phone}
+                onChangeHandle={handleInputChange}
                 color="bg"
                 label="Номер телефону"
                 required
@@ -59,6 +102,9 @@ const Contacts = () => {
 
             <FormControl
               type="textarea"
+              name="message"
+              value={formData.message}
+              onChangeHandle={handleInputChange}
               color="bg"
               label="Повідомлення тут..."
               rows="10"
@@ -66,10 +112,12 @@ const Contacts = () => {
             />
 
             <Button
+              type="submit"
               color="orange"
               text="Надіслати повідомлення"
               className={styles.contactsFormSubmit}
               icon="icon-arrow-right"
+              disabled={submitDisabled}
             />
           </fieldset>
         </form>
