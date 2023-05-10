@@ -10,6 +10,7 @@ import pizza from '../../mocks/pizza'
 import { Icons } from '../../components/organism/Icons/Icons'
 
 const Checkout = () => {
+  const order = pizza.products.map((item) => item.id) // array of products ids
   const sum = pizza.products.reduce((a, b) => (a = a + Number(b.price)), 0)
   const initialFormData = {
     name: '',
@@ -21,6 +22,7 @@ const Checkout = () => {
     payment: 'card',
     day: 'today',
     time: 'asap',
+    products: order,
   }
   const [formData, setFormData] = useState(initialFormData)
   //const [submitDisabled, setSubmitDisabled] = useState(true)
@@ -48,7 +50,6 @@ const Checkout = () => {
     try {
       console.log(
         formData, // form data scoped into object
-        pizza.products.map((item) => item.id), // array of products ids
         setIsShowModal(true)
       )
       alert('Пук... Срєньк... Подивись у консоль')
