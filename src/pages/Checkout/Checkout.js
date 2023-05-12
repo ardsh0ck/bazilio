@@ -11,7 +11,7 @@ import { Icons } from '../../components/organism/Icons/Icons'
 
 const Checkout = () => {
   const order = pizza.products.map((item) => item.id) // array of products ids
-  const sum = pizza.products.reduce((a, b) => (a = a + Number(b.price)), 0)
+  const sum = pizza.products.reduce((a, b) => (a = a + Number(b.price)), 0) // total sum
   const initialFormData = {
     name: '',
     phone: '',

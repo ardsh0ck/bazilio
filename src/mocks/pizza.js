@@ -1,4 +1,3 @@
-import { v4 as uuidv4 } from 'uuid'
 import pizzaOne from '../assets/images/mocks/pizza-1.jpg'
 import pizzaTwo from '../assets/images/mocks/pizza-2.jpg'
 import pizzaThree from '../assets/images/mocks/pizza-3.jpg'
@@ -12,7 +11,7 @@ const pizza = {
   },
   products: [
     {
-      id: uuidv4(),
+      id: 20340,
       image: {
         small: pizzaOne,
         big: pizzaBig,
@@ -30,7 +29,7 @@ const pizza = {
       slug: 'baluvana-galya',
     },
     {
-      id: uuidv4(),
+      id: 20341,
       image: {
         small: pizzaTwo,
         big: pizzaBig,
@@ -47,7 +46,7 @@ const pizza = {
       slug: 'garyahca-tsipa',
     },
     {
-      id: uuidv4(),
+      id: 20342,
       image: {
         small: pizzaThree,
         big: pizzaBig,
@@ -61,7 +60,7 @@ const pizza = {
       slug: 'bavaria',
     },
     {
-      id: uuidv4(),
+      id: 20343,
       image: {
         small: pizzaFour,
         big: pizzaBig,
@@ -75,7 +74,7 @@ const pizza = {
       slug: 'bavaria',
     },
     {
-      id: uuidv4(),
+      id: 20344,
       image: {
         small: pizzaOne,
         big: pizzaBig,
@@ -88,7 +87,7 @@ const pizza = {
       slug: 'bazilio',
     },
     {
-      id: uuidv4(),
+      id: 20345,
       image: {
         small: pizzaTwo,
         big: pizzaBig,
@@ -102,7 +101,7 @@ const pizza = {
       slug: 'bavaria',
     },
     {
-      id: uuidv4(),
+      id: 20346,
       image: {
         small: pizzaThree,
         big: pizzaBig,
@@ -116,7 +115,7 @@ const pizza = {
       slug: 'bavaria',
     },
     {
-      id: uuidv4(),
+      id: 20347,
       image: {
         small: pizzaFour,
         big: pizzaBig,
@@ -130,7 +129,7 @@ const pizza = {
       slug: 'bavaria',
     },
     {
-      id: uuidv4(),
+      id: 20348,
       image: {
         small: pizzaOne,
         big: pizzaBig,
@@ -143,7 +142,7 @@ const pizza = {
       slug: 'baluvana-galya',
     },
     {
-      id: uuidv4(),
+      id: 20349,
       image: {
         small: pizzaTwo,
         big: pizzaBig,
@@ -156,7 +155,7 @@ const pizza = {
       slug: 'garyacha-tsipa',
     },
     {
-      id: uuidv4(),
+      id: 20350,
       image: {
         small: pizzaThree,
         big: pizzaBig,
@@ -170,7 +169,7 @@ const pizza = {
       slug: 'bavaria',
     },
     {
-      id: uuidv4(),
+      id: 20351,
       image: {
         small: pizzaFour,
         big: pizzaBig,
@@ -183,7 +182,7 @@ const pizza = {
       slug: 'baluvana-galya',
     },
     {
-      id: uuidv4(),
+      id: 20352,
       image: {
         small: pizzaOne,
         big: pizzaBig,
@@ -196,7 +195,7 @@ const pizza = {
       slug: 'garyacha-tsipa',
     },
     {
-      id: uuidv4(),
+      id: 20353,
       image: {
         small: pizzaTwo,
         big: pizzaBig,
@@ -210,7 +209,7 @@ const pizza = {
       slug: 'bavaria',
     },
     {
-      id: uuidv4(),
+      id: 20354,
       image: {
         small: pizzaThree,
         big: pizzaBig,
@@ -224,7 +223,7 @@ const pizza = {
       slug: 'bavaria',
     },
     {
-      id: uuidv4(),
+      id: 20355,
       image: {
         small: pizzaFour,
         big: pizzaBig,
@@ -237,7 +236,7 @@ const pizza = {
       slug: 'bazilio',
     },
     {
-      id: uuidv4(),
+      id: 20356,
       image: {
         small: pizzaOne,
         big: pizzaBig,
@@ -251,7 +250,7 @@ const pizza = {
       slug: 'bavaria',
     },
     {
-      id: uuidv4(),
+      id: 20357,
       image: {
         small: pizzaTwo,
         big: pizzaBig,
@@ -265,7 +264,7 @@ const pizza = {
       slug: 'bavaria',
     },
     {
-      id: uuidv4(),
+      id: 20358,
       image: {
         small: pizzaThree,
         big: pizzaBig,
@@ -279,7 +278,7 @@ const pizza = {
       slug: 'bavaria',
     },
     {
-      id: uuidv4(),
+      id: 20359,
       image: {
         small: pizzaFour,
         big: pizzaBig,
@@ -292,7 +291,7 @@ const pizza = {
       slug: 'baluvana-galya',
     },
     {
-      id: uuidv4(),
+      id: 20360,
       image: {
         small: pizzaOne,
         big: pizzaBig,
@@ -305,7 +304,7 @@ const pizza = {
       slug: 'garyacha-tsipa',
     },
     {
-      id: uuidv4(),
+      id: 20361,
       image: {
         small: pizzaTwo,
         big: pizzaBig,

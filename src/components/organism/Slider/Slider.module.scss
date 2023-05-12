@@ -1,7 +1,6 @@
 .slider {
-  @apply max-w-[1400px] w-full mb-6 mx-auto;
+  @apply max-w-[1400px] w-full mb-6 mx-auto xl:rounded-br-[30px] xl:rounded-bl-[30px] block overflow-hidden;
 
   &Slide {
-    @apply rounded-br-[30px] rounded-bl-[30px] block overflow-hidden;
   }
 }

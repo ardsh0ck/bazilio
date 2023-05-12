@@ -1,0 +1,15 @@
+.actions {
+  &List {
+    @apply grid gap-4;
+
+    @screen md {
+      @apply gap-x-5 gap-y-8;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @screen xl {
+      @apply gap-y-9;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

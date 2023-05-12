@@ -3,12 +3,12 @@ import styles from './Breadcrumbs.module.scss'
 import { Icons } from '../Icons/Icons'
 
 const Breadcrumbs = (props) => {
-  const { title } = props
+  const { title, middle } = props
 
   return (
     <div className={styles.breadcrumbs}>
       <div className="inner">
-        <ul className={styles.breadcrumbsList}>
+        <ol className={styles.breadcrumbsList}>
           <li className={styles.breadcrumbsItem}>
             <Link className={styles.breadcrumbsLink} to={'/'}>
               Bazilio
@@ -16,17 +16,19 @@ const Breadcrumbs = (props) => {
             </Link>
           </li>
 
-          <li className={styles.breadcrumbsItem}>
-            <Link className={styles.breadcrumbsLink} to={'/'}>
-              Middle Page
-              <Icons name="icon-arrow" />
-            </Link>
-          </li>
+          {middle && (
+            <li className={styles.breadcrumbsItem}>
+              <Link className={styles.breadcrumbsLink} to={middle.href}>
+                {middle.text}
+                <Icons name="icon-arrow" />
+              </Link>
+            </li>
+          )}
 
           <li className={styles.breadcrumbsItem}>
             <p className={styles.breadcrumbsCurrent}>{title}</p>
           </li>
-        </ul>
+        </ol>
       </div>
     </div>
   )

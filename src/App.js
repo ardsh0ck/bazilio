@@ -11,11 +11,14 @@ import Drinks from './pages/Drinks/Drinks'
 import Contacts from './pages/Contacts/Contacts'
 import Delivery from './pages/Delivery/Delivery'
 import Actions from './pages/Actions/Actions'
+import ActionList from './pages/Actions/ActionList/ActionList'
+import Action from './pages/Actions/Action/Action'
 import Checkout from './pages/Checkout/Checkout'
 import NotFound from './pages/NotFound/NotFound'
 import Product from './components/organism/Product/Product'
 import Catalog from './components/organism/Catalog/Catalog'
 import dishes from './mocks/pizza'
+import action from './mocks/actions'
 import { ReactComponent as Logo } from './assets/images/svg/logo.svg'
 
 function App() {
@@ -94,7 +97,14 @@ function App() {
                 title={`${titlePrefix}`}
               />
             </Route>
-            <Route element={<Actions />} path="actions" />
+            <Route element={<Actions />} path="actions">
+              <Route index element={<ActionList data={action} />} />
+              <Route
+                element={<Action />}
+                path=":slug"
+                title={`${titlePrefix}`}
+              />
+            </Route>
             <Route element={<Delivery />} path="delivery" />
             <Route element={<Contacts />} path="contacts" />
             <Route element={<Checkout />} path="checkout" />

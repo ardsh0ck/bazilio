@@ -1,0 +1,41 @@
+.action {
+  @apply bg-white overflow-hidden transition-all duration-300;
+  border-radius: 20px;
+  box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.03);
+
+  @screen xl {
+    border-radius: 30px;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      box-shadow: 0px 7px 25px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &Picture {
+    @apply w-full;
+  }
+
+  &Body {
+    @apply p-6;
+  }
+
+  &Title {
+    @apply mb-2 font-semibold;
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  &Period {
+    @apply block mb-2 text-main-black-50;
+    font-size: 15px;
+    line-height: 21px;
+  }
+
+  &Description {
+    @apply mb-4 text-secondary-black line-clamp-3 xl:line-clamp-2;
+    font-size: 15px;
+    line-height: 21px;
+  }
+}
