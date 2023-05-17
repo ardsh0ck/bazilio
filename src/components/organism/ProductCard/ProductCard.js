@@ -1,12 +1,21 @@
 import { Link, useLocation } from 'react-router-dom'
+import { useContext } from 'react'
+import { ShoppingCartContext } from '../ShoppingCart/ShoppingCartContext'
 import Button from '../Button/Button'
 import { Icons } from '../Icons/Icons'
 import styles from './ProductCard.module.scss'
 import PromoLabel from '../PromoLabel/PromoLabel'
 
 const ProductCard = (props) => {
-  const { slug, image, title, weight, contents, price, label, hot } = props
+  const { id, slug, image, title, weight, contents, hot, label, price } = props
+
   const location = useLocation()
+
+  const { addItemToCart } = useContext(ShoppingCartContext)
+
+  const handleBuyClick = (itemId) => {
+    addItemToCart(itemId)
+  }
 
   return (
     <div className={styles.productCard}>
@@ -30,7 +39,12 @@ const ProductCard = (props) => {
         <p className={styles.productCardPrice}>
           <span>{price}</span>&#8372;
         </p>
-        <Button color="orange" text="В кошик" icon="icon-cart" />
+        <Button
+          color="orange"
+          text="В кошик"
+          icon="icon-cart"
+          onClickHendler={() => handleBuyClick(id)}
+        />
       </div>
     </div>
   )
