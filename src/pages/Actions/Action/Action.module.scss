@@ -1,4 +1,25 @@
 .action {
-  @apply w-full mx-auto md:px-6;
+  @apply w-full mx-auto px-4 md:px-6;
   max-width: 960px;
+
+  &Banner {
+    @apply mb-8;
+    border-radius: 30px;
+  }
+
+  &Heading {
+    @apply mb-4;
+  }
+
+  &Period {
+    @apply block mb-5 text-main-black-50;
+    font-size: 15px;
+    line-height: 21px;
+  }
+
+  &Description {
+    @apply mb-10 text-secondary-black;
+    font-size: 18px;
+    line-height: 26px;
+  }
 }
